@@ -32,8 +32,7 @@ public class MyLinkedList<E> {
 
 
 
-        //System.out.println(mainlist.reverse(mainlist.head));
-        mainlist.reverse();
+        mainlist.reverse();  //reverse() works
 
         mainlist.printlist();
 
@@ -41,7 +40,6 @@ public class MyLinkedList<E> {
 
     public MyLinkedList()
     {
-        //head = null;  //if I use this I get a nullexception.
         head = new Node<E>(null);  //notes from todays class.
         int size = 0;
 
@@ -125,23 +123,7 @@ public class MyLinkedList<E> {
         return node;
     }
 
-    /*public E reverse(Node<E> head)
-    {
-        Node<E> prev = null;                                 //Dont want to start at current=head, start at current=head.next
-        Node<E> current = head.next;
-        Node<E> next;
-        while (current != null)
-        {
-
-            next = current.next;
-            current.next = prev;
-            prev = current;
-            current = next;
-        }   //not head but head.next
-
-        return prev.data;
-    }*/
-
+   
     public void printlist()
     {
         Node<E> n = head.next;
